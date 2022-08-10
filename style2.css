@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:yellow;
+} 
+h1 {
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line {
+    display: grid;
+    grid-template-columns: 10px 100px;
+    grid-gap:20px;
+    padding-bottom: 20px;
+}
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+}
+#box1 {
+    animation: an1 3s ease-in-out;
+}
+@keyframes an1 {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 300px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+#box2 {
+    animation: an2 4s ease-in-out 3s;
+}
+@keyframes an2 {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        width: 300px;
+        height: 400px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+#box3 {
+    animation: an1 3s cubic-bezier(0.68, 0.03, 0.31, 1.11) 7s;
+}
+#box4 {
+    animation: an1 3s ease-in 10s;
+}
+#box5 {
+    animation: an1 3s cubic-bezier(0, 0.84, 1, 0.26) 13s;
+}
+#box6 {
+    animation: an1 3s ease-out 16s;
+}
+#box7 {
+    animation: an1 3s cubic-bezier(0.32, 1.47, 0.62, 0) 19s;
+}
